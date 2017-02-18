@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Led</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .led--expr {
+    display: inline-block;
+  }
+
+  .led--expr.-abs {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .led--expr.-abs > .-parameter {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .led--expr.-abs > .-parameter:before {
+    content: 'λ';
+  }
+  .led--expr.-abs > .-parameter:after {
+    content: '.';
+  }
+  .led--expr.-abs > *:nth-child(2) {
+    margin-right: 1em;
+  }
+
+  .led--expr.-app > *:nth-child(1) {
+    margin-right: 1em;
+  }
+  .led--expr.-app > .-app:nth-child(2):before {
+    content: '(';
+  }
+  .led--expr.-app > .-app:nth-child(2):after {
+    content: ')';
+  }
+
+  .led--expr.-if {
+    border-left: double 3px black;
+    border-right: double 3px black;
+    border-spacing: 0;
+    border-collapse: collapse;
+    vertical-align: middle;
+  }
+  .led--expr.-if > tr > td:first-child {
+    padding-left: 1em;
+  }
+  .led--expr.-if > tr > td:last-child {
+    padding-right: 1em;
+  }
+  .led--expr.-if > tr:not(:last-child) > *:nth-child(2):before {
+    margin-left: 1em;
+    margin-right: 1em;
+    content: 'if';
+  }
+  .led--expr.-if > tr:last-child > *:nth-child(2):before {
+    margin-left: 1em;
+    content: 'otherwise';
+  }
+</style>
+<div id="app"></div>
+<script src="output/led.js"></script>

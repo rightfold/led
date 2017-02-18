@@ -1,0 +1,7 @@
+{
+  "name": "led",
+  "dependencies": {
+    "purescript-pux": "^7.0.0",
+    "purescript-prelude": "^2.4.0"
+  }
+}
